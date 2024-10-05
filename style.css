@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+:root {
+  --success-cl: #2691d9;
+  --error-cl: #e74c3c;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  font-family: var(--font-family);
+  border: none;
+  height: 100vh;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  
+  background-image: url(./img/hinh-nen-may-tinh-chill-4k03.jpg);
+}
+.container {
+  box-shadow: 0px 0px 60px gray;
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  transition: 0.5s;
+  backdrop-filter: blur(10px);
+}
+.container:hover {
+  --x: 100%;
+}
+.container h1 {
+  font-family: var(--font-family);
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.form-control {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+.form-control input {
+  opacity: 0.5;
+  width: 100%;
+  border: none;
+  height: 40px;
+  outline: none;
+
+  border-bottom: 2px solid rgb(16, 195, 223);
+}
+
+.form-control span {
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+  top: 38px;
+  width: 0%;
+  border-bottom: 2px solid var(--success-cl);
+  transition: 0.3s;
+}
+.form-control input:focus ~ span {
+  width: 100%;
+}
+
+.form-control.invalid input ~ span {
+  width: 100%;
+  opacity: 0.5;
+  width: 0%;
+}
+input {
+  background: transparent;
+}
+/* .form-control.invalid input: ~ span {
+  
+} */
+
+.form-control.invalid input::placeholder {
+  opacity: 1;
+  color: #e74c3c;
+}
+.form-control.invalid input::placeholder:focus {
+  border-bottom: 2px solid var(--success-cl);
+}
+.btn__submit {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: var(--success-cl);
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+}
+.btn__submit:hover {
+  opacity: 0.8;
+}
+.signup__link {
+  text-align: center;
+  font-family: var(--font-family);
+}
+a {
+  color: var(--success-cl);
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+a:hover {
+  text-decoration: underline;
+}
+input {
+  font-family: var(--font-family);
+}
+input::placeholder{
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
